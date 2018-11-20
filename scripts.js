@@ -1,3 +1,3 @@
 console.log('stuff');
 
-document.write('other stuff');
+// document.write('other stuff');
