@@ -6,19 +6,69 @@ body {
   margin:0;
   padding:0;
 }
+
 h1 {
   font-family: 'Merriweather', serif;
   font-weight: 400;
 }
+.intro {
+  margin-bottom: 3em;
+}
+
+.social {
+  margin-bottom: 3em;
+}
+.social a {
+  color: #EBD9BB;
+  margin: 10px;
+}
+
+.button {
+    border: 2px solid #EBD9BB;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    background: #353436;
+    color: #EBD9BB;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+                transform 150ms ease;
+}
+
+.button:hover,
+.button:focus {
+    background: #EBD9BB;
+    color: #353436;
+}
+
+.button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.button:active {
+    transform: scale(0.99);
+}
+
 .header {
   height: 98vh;
   width: 98vw;
   display: flex;
 }
+
 .head-content {
-  text-align: center;
+  text-align: left;
   margin: auto;
   width: 50vw;
+}
+.head-content img {
+  width: 175px;
+  height: 175px;
+  border-radius: 200px;
+  border: 5px solid #4e4c50;
+  filter: opacity(80%);
 }
 
 .grid-wrap {
