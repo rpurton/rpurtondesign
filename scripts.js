@@ -1,19 +1,13 @@
-/*
-function draw() {
-        var canvas = document.getElementById('animation');
-        if (canvas.getContext) {
-          var ctx = canvas.getContext('2d');
-            ctx.strokeStyle = '#4e4c50';
-            ctx.strokeRect(10, 10, 50, 50);
-
-            ctx.strokeRect(30, 30, 50, 50);
-
-            ctx.beginPath();
-            ctx.moveTo(75, 50);
-            ctx.lineTo(100, 75);
-            ctx.lineTo(100, 25);
-            ctx.lineTo(75, 50);
-            ctx.stroke();
-        }
-      }
-*/
+var nav = document.getElementById("topmenu");
+window.onscroll = function () {
+  if (window.scrollY >= 100 ) {
+    topmenu.classList.add("nav-colored");
+    console.log("add nav-colored");
+    topmenu.classList.remove("nav-transparent");
+}
+else {
+//    topmenu.classList.add("nav-transparent");
+    topmenu.classList.remove("nav-colored");
+    console.log("remove nav-colored");
+}
+};

@@ -16,74 +16,61 @@ svg {
   position: absolute;
 }
 
-.st0 {
-  fill:none;
-  stroke:#252525;
-  stroke-width:2px;
-  stroke-miterlimit:10;
+#topmenu {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  padding: .5em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-#shape1 {
-	 animation: shape1 10s infinite alternate;
- }
- #shape2 {
- 	 animation: shape2 10s infinite alternate;
+#topmenu a {
+    color: #EBD9BB;
+    margin: 10px 10px 10px 10px;
+    text-decoration: none;
+}
+#topmenu a:hover {
+    color: #4e4c50;
+}
+#topmenu .button {
+  margin-right: 2em;
+}
+
+.nav-colored {
+  background-color: #252525;
+  animation-name: fadeIn;
+  animation-delay: 0s;
+  animation-duration: 1s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top:-5em;
   }
- #shape4 {
- 	 animation: shape4 10s infinite alternate;
+
+  100% {
+    opacity: 100%;
+    top:0;
   }
- #shape5 {
- 	 animation: shape5 10s infinite alternate;
+}
+
+.nav-transparent {
+  background-color:rgb(37, 37, 37,0.0);
+  animation-name: None;
+  animation-delay: 0s;
+  animation-duration: 0s;
+}
+@keyframes None {
+  0% {
+    opacity: 100;
   }
- #shape6 {
- 	 animation: shape6 10s infinite alternate;
+
+  100% {
+    opacity: 100;
   }
-
-@keyframes shape1 {
-		from {
-				transform: rotate(5deg);
-		}
-		to {
-        transform: translate(0px, 20%);
-		}
 }
-
-@keyframes shape2 {
-   from {
-       transform-origin: center;
-   }
-   to {
-       transform: translate(5px, -20%);
-   }
-}
-
-@keyframes shape4 {
-   from {
-       transform: rotate(10deg);
-   }
-   to {
-       transform: translate(-55px, 25%);
-   }
-}
-
-@keyframes shape5 {
-   from {
-       transform-origin: 100px 100px;
-   }
-   to {
-       transform: translate(-5px, 10%);
-   }
-}
-
-@keyframes shape6 {
-   from {
-       transform-origin: 5px 5px;
-   }
-   to {
-       transform: translate(10px, 5%);
-   }
-}
-
 
 .header {
   position: relative;
@@ -108,23 +95,11 @@ svg {
   margin-bottom: 3em;
 }
 
-.social {
-  margin-bottom: 3em;
-}
-.social a {
-  color: #EBD9BB;
-  margin: 10px;
-}
-.social a:hover {
-  color: #4e4c50;
-}
-
 .button {
     border: 2px solid #EBD9BB;
     border-radius: 30px;
-    padding: 1rem 2rem;
+    padding: .75em 1.5em;
     text-decoration: none;
-    background: #353436;
     color: #EBD9BB;
     font-size: 1rem;
     cursor: pointer;
@@ -148,13 +123,23 @@ svg {
     transform: scale(0.99);
 }
 
+/*begin grid*/
+
 .grid-wrap {
   margin: auto;
   padding: 3em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(2, minmax(400px, 1fr));
   grid-auto-rows: 400px;
-  grid-gap: 50px;
+  grid-gap: 5px;
+  max-width: 1500px;
+}
+
+@media screen and (max-width:1100px) {
+  .grid-wrap {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 600px;
+  }
 }
 
 .item {
@@ -164,8 +149,17 @@ svg {
 .item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+}
+
+.item a {
+  color:#EBD9BB;
+  text-decoration: none;
+}
+
+.item a:hover {
+  text-decoration: underline;
 }
 
 .overlay {
@@ -175,7 +169,7 @@ svg {
  width: 100%;
  height: 100%;
  transform: translate(-50%, -50%);
- background-color: rgb(53,52,54,0.7);
+ background-color: rgb(53,52,54,0.9);
  border-color: rgb(53,52,54,0.7);
  border-style: solid;
  border-width: 2px;
@@ -191,9 +185,8 @@ svg {
   top: 50%;
   left: 50%;
   width: 75%;
-  height: 30%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: left;
   color: #EBD9BB;
   opacity: inherit;
 }
