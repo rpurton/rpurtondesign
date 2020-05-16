@@ -91,6 +91,7 @@ svg {
 
 .intro {
   margin-bottom: 3em;
+  line-height:1.2em;
 }
 
 .button {
@@ -197,6 +198,11 @@ svg {
   transition: .5s;
 }
 
+.overlay:focus-within {
+  opacity: 1;
+  transition: .5s;
+}
+
 .overlay div {
   position: absolute;
   top: 50%;
@@ -225,7 +231,7 @@ svg {
 .st0 {
   fill:none;
   stroke:#232323;
-  stroke-width:2px;
+  stroke-width:3px;
   stroke-miterlimit:10;
 }
 
@@ -236,13 +242,13 @@ svg {
  	 animation: shape2 10s infinite alternate;
   }
  #shape4 {
- 	 animation: shape4 10s infinite alternate;
+ 	 animation: shape3 10s infinite alternate;
   }
  #shape5 {
- 	 animation: shape5 10s infinite alternate;
+ 	 animation: shape4 10s infinite alternate;
   }
  #shape6 {
- 	 animation: shape6 10s infinite alternate;
+ 	 animation: shape5 10s infinite alternate;
   }
 
 @keyframes shape1 {
@@ -263,7 +269,7 @@ svg {
    }
 }
 
-@keyframes shape4 {
+@keyframes shape3 {
    from {
        transform: rotate(10deg);
    }
@@ -272,7 +278,7 @@ svg {
    }
 }
 
-@keyframes shape5 {
+@keyframes shape4 {
    from {
        transform-origin: 100px 100px;
    }
@@ -281,7 +287,7 @@ svg {
    }
 }
 
-@keyframes shape6 {
+@keyframes shape5 {
    from {
        transform-origin: 5px 5px;
    }
